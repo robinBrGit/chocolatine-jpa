@@ -14,6 +14,7 @@ public class Menu {
     public void init(){
         options.put(1,new ListerChocolatine());
         options.put(2,new CreerChocolatine());
+        options.put(3,new CreerCommande());
     }
 
     public Map<Integer, OptionIhm> getOptions() {
