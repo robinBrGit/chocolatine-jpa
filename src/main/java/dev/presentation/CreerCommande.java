@@ -18,5 +18,6 @@ public class CreerCommande extends Option implements OptionIhm {
         chocolatineMap.forEach((i,c)->{
             System.out.println(i+": "+c);
         });
+
     }
 }
