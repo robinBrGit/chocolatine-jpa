@@ -1,6 +1,15 @@
 package dev.entite;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "livreur")
 public class Livreur {
+    @Id
+    @Column(name = "id_livreur")
     private int id;
     private String nom;
     private String prenom;

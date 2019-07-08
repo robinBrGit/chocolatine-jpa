@@ -7,6 +7,7 @@ import java.util.List;
 @Table(name = "commandes_details")
 public class Commande {
     @Id
+    @Column(name = "id")
     private int id;
     @OneToMany(mappedBy = "commande")
     private List<ChocoCom> chocoComs;
@@ -15,6 +16,10 @@ public class Commande {
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "enum('EN_ATTENTE', 'EN_COURS_DE_LIVRAISON', 'LIVRÉ')")
     private Statut statut;
+    @ManyToOne
+    @JoinColumn(name = "id_livreur")
+    private Livreur livreur;
+
 
     public Commande() {
     }
